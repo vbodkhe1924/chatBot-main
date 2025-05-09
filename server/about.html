@@ -1,0 +1,20 @@
+<!-- templates/about.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+</head>
+<body>
+    <h1>About Us</h1>
+    <p>{{ about_us['description'] }}</p>
+    <h2>Our Mission</h2>
+    <p>{{ about_us['mission'] }}</p>
+    <h2>Our Vision</h2>
+    <p>{{ about_us['vision'] }}</p>
+    <h2>Contact Us</h2>
+    <p>{{ about_us['contact'] }}</p>
+    <a href="{{ url_for('index') }}">Back to Home</a>
+</body>
+</html>

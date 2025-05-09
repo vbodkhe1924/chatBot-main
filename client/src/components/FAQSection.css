@@ -1,0 +1,41 @@
+/* Custom marquee animation for line 1 and line 3 (ping-pong up to 50%) */
+@keyframes marquee-pingpong-half {
+  0% {
+    transform: translateX(0%);  /* Start at original position */
+  }
+  50% {
+    transform: translateX(-50%);  /* Move halfway across */
+  }
+  100% {
+    transform: translateX(0%);  /* Return to start */
+  }
+}
+
+/* Custom marquee animation for line 2 (reverse direction, ping-pong up to 50%) */
+@keyframes marquee-reverse-pingpong-half {
+  0% {
+    transform: translateX(0%);  /* Start at original position */
+  }
+  50% {
+    transform: translateX(50%);  /* Move halfway in the reverse direction */
+  }
+  100% {
+    transform: translateX(0%);  /* Return to start */
+  }
+}
+
+/* Apply slow ping-pong animation to line 1 and line 3 */
+.animate-marquee-slow {
+  animation: marquee-pingpong-half 15s linear infinite;  /* Adjust duration for slower speed */
+}
+
+/* Apply reverse ping-pong animation for the second line */
+.animate-marquee-reverse-slow {
+  animation: marquee-reverse-pingpong-half 15s linear infinite;  /* Reverse direction */
+}
+
+/* Stop animation on hover */
+.animate-marquee-slow:hover,
+.animate-marquee-reverse-slow:hover {
+  animation-play-state: paused;  /* Pause animation on hover */
+}
